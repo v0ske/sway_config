@@ -5,7 +5,7 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 
-ln -s sway /home/laurent08/.config/sway
-ln -s swaync /home/laurent08/.config/swaync
-ln -s waybar /home/laurent08/.config/waybar
-ln -s config.d /etc/sway/config.d
+ln -s /home/laurent08/sway/sway /home/laurent08/.config/sway
+ln -s /home/laurent08/swayswaync /home/laurent08/.config/swaync
+ln -s /home/laurent08/sway/waybar /home/laurent08/.config/waybar
+ln -s /home/laurent08/sway/config.d /etc/sway/config.d
