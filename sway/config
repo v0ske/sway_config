@@ -113,6 +113,9 @@ exec xrdb .Xresources
     # Start your launcher
     bindsym $mod+space exec nwg-drawer
 
+    #logout screen
+    bindsym $mod+escape exec nwgbar
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -263,7 +266,7 @@ bar {
 ### lockscreen ###
 ##################
 
-bindsym mod4+l exec /home/laurent08/.config/sway/assets/lock.sh
+bindsym mod4+l exec ~/.config/sway/assets/lock.sh
 
 ################
 ### displays ###
