@@ -22,7 +22,7 @@ set $term kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/laurent08/Pictures/abstract.jpg fill
+output * bg /home/laurent08/Pictures/wallpapers/abstract2.jpg fill
 
 
 
@@ -70,6 +70,9 @@ gaps inner 5
 exec swaync
 exec blueman-manager
 exec mailspring
+exec discord
+exec spotify
+exec openrgb -p white.orp
 #exec flameshot
 
 bindsym $mod+shift+n exec swaync-client -t -sw
@@ -87,6 +90,8 @@ exec autotiling
 ##########################
 ### audio & brightness ###
 ##########################
+
+
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -273,11 +278,10 @@ bindsym mod4+l exec ~/.config/sway/assets/lock.sh
 ### displays ###
 ################
 
-output DP-3     pos 1920 480 res 2560x1440@75hz subpixel rgb
-output HDMI-A-2 pos 4480 0   res 1920x1080 transform 90 subpixel rgb
-output eDP-1    pos 0    660 res 1920x1080 subpixel rgb
-
-focus output DP-3
+output DP-1     pos 1920 0 res 2560x1440@75hz subpixel rgb
+output HDMI-A-1 pos 4480 0 res 1920x1080 subpixel rgb
+output DVI-I-1  pos 0    0 res 1920x1080 subpixel rgb
+focus output DP-1
 
 #################
 ### shortcuts ###
@@ -293,3 +297,8 @@ include /etc/sway/config.d/*
 
 exec eval $(gnome-keyring-deamon --start)
 exec export SSH_AUTH_SOCK
+
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+#################
+include /etc/sway/config.d/*.conf
