@@ -295,6 +295,8 @@ bindsym $mod+s exec grimshot copy area
 #################
 include /etc/sway/config.d/*
 
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 exec eval $(gnome-keyring-deamon --start)
 exec export SSH_AUTH_SOCK
 
