@@ -117,7 +117,7 @@ exec xrdb .Xresources
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+space exec nwg-drawer
+    bindsym $mod+space exec nwg-drawer --nofs -g Materia-dark-compact
 
     #logout screen
     bindsym $mod+escape exec nwgbar
