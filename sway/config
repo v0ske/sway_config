@@ -290,7 +290,7 @@ focus output DP-1
 bindsym $mod+f exec nautilus
 #bindsym $mod+h exec htop
 bindsym $mod+s exec grimshot copy area 
-#bindsym $mod+s exec grimshot save area ~/Pictures/
+bindsym $mod+Shift+s exec grimshot save area ~/Pictures/
 
 #################
 include /etc/sway/config.d/*
