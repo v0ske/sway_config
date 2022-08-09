@@ -280,7 +280,7 @@ bindsym mod4+l exec ~/.config/sway/assets/lock.sh
 
 output DP-1     pos 1920 0 res 2560x1440@75hz subpixel rgb
 output HDMI-A-1 pos 4480 0 res 1920x1080 subpixel rgb
-output DVI-I-1  pos 0    0 res 1920x1080 subpixel rgb
+output HDMI-A-2 pos 0    0 res 1920x1080 subpixel rgb
 focus output DP-1
 
 #################
