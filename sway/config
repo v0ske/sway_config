@@ -275,7 +275,8 @@ bar {
 ### lockscreen ###
 ##################
 
-bindsym mod4+l exec ~/.config/sway/assets/lock.sh
+#bindsym mod4+l exec ~/.config/sway/assets/lock.sh
+bindsym mod4+l exec swaylock-fancy
 
 ################
 ### displays ###
