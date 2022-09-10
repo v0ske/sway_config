@@ -22,7 +22,7 @@ set $term kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/laurent08/Pictures/wallpapers/abstract2.jpg fill
+output * bg /home/laurent08/sway_config/sway/assets/abstract2.jpg fill
 
 
 
@@ -82,6 +82,14 @@ bindsym $mod+shift+n exec swaync-client -t -sw
 bindsym $mod+Shift+a exec /home/laurent08/.config/assets/power-menu.sh
 
 exec autotiling
+exec xsettingsd
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+  gsettings set $gnome-schema gtk-theme "Materia-dark-compact"
+  gsettings set $gnome-schema icon-theme "Papirus-Dark"
+  gsettings set $gnome-schema cursor-theme "capitaine-cursors"
+}
 
 #bindsym $mod+shift+g exec swaymsg gaps inner current set 18 && swaymsg gaps outer current set 4
 #bindsym $mod+shift+f exec swaymsg gaps inner current set 38 && swaymsg gaps outer current set 8
